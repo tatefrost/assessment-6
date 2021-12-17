@@ -58,13 +58,13 @@ app.post('/api/duel', (req, res) => {
             playerRecord.losses++
             res.status(200).send('You lost!')
 
-            rollbar.info('User lost!') // ROLLBAR EVENT!
+            rollbar.log('User lost!') // ROLLBAR EVENT!
 
         } else {
             playerRecord.losses++
             res.status(200).send('You won!')
 
-            rollbar.info('User lost!') // ROLLBAR EVENT!
+            rollbar.log('User lost!') // ROLLBAR EVENT!
 
         }
     } catch (error) {
